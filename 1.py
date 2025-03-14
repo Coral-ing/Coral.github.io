@@ -1,27 +1,58 @@
 import pandas as pd
+import sqlite3
+import matplotlib.pyplot as plt
 
-# Create customer data
-customer_data = {
-    'CustomerID': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Heidi', 'Ivan', 'Judy'],
-    'Email': ['alice@example.com', 'bob@example.com', 'charlie@example.com', 'david@example.com', 'eve@example.com',
-              'frank@example.com', 'grace@example.com', 'heidi@example.com', 'ivan@example.com', 'judy@example.com']
-}
-customers_df = pd.DataFrame(customer_data)
-customers_df.to_csv('customer.csv', index=False)
 
-# Create orders data
-orders_data = {
-    'OrderID': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    'CustomerID': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    'Product': ['Laptop', 'Smartphone', 'Tablet', 'Headphones', 'Camera', 'Monitor', 'Keyboard', 'Mouse', 'Printer','Speaker'],
-    'Quantity': [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
-    'Price': [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
-    'OrderDate': ['2024-09-01', '2024-11-01', '2025-01-01', '2024-08-01', '2025-02-01', '2024-12-01', '2024-07-01', '2025-03-01', '2024-10-01', '2025-04-01']
-}
-orders_df = pd.DataFrame(orders_data)
-orders_df.to_csv('orders.csv', index=False)
+income_df = pd.read_excel('income.xlsx')
+expenses_df = pd.read_csv('expenses.txt', sep=' ')
 
-# Print your name (assuming you are one of the customers)
-your_name = "Coral"  # Replace with your actual name
-print(f"My name is {your_name}.")
+
+income_df['Month'] = pd.to_datetime(income_df['Month'].str.strip(), format='%Y-%m-%d', errors='coerce')
+expenses_df['Month'] = pd.to_datetime(expenses_df['Month'].str.strip(), format='%Y-%m-%d', errors='coerce')
+
+
+if income_df['Month'].isna().any():
+    print("Warning: Invalid dates found in income data.")
+if expenses_df['Month'].isna().any():
+    print("Warning: Invalid dates found in expenses data.")
+
+
+merged_df = pd.merge(income_df, expenses_df, on='Month', how='inner')
+
+
+merged_df['Savings'] = merged_df['Income'] - merged_df['Expenses']
+
+
+if merged_df['Income'].sum() <= 0:
+    raise ValueError("Total income must be greater than zero.")
+if merged_df['Expenses'].sum() > merged_df['Income'].sum():
+    raise ValueError("Total expenses cannot exceed total income.")
+
+
+expense_percentage = merged_df['Expenses'].sum() / merged_df['Income'].sum() * 100
+labels = ['Expenses', 'Savings']
+sizes = [max(0, expense_percentage), max(0, 100 - expense_percentage)]
+
+
+conn = sqlite3.connect('finance_data.db')
+merged_df.to_sql('FinanceData', conn, if_exists='replace', index=False)
+conn.close()
+
+
+plt.figure(figsize=(12, 6))
+
+
+plt.subplot(1, 2, 1)
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+plt.title('Expense vs Savings Distribution')
+
+
+plt.subplot(1, 2, 2)
+merged_df.sort_values('Month', inplace=True)
+merged_df.set_index('Month')['Savings'].plot(kind='line', marker='o', color='green')
+plt.title('Monthly Savings Trends')
+plt.xlabel('Month')
+plt.ylabel('Savings ($)')
+
+plt.tight_layout()
+plt.show()
