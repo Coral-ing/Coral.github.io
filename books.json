@@ -1,0 +1,72 @@
+[
+    {
+        "author": "Donald E. Knuth",
+        "title": "The Art of Computer Programming",
+        "description": "This multi - volume masterpiece by Donald E. Knuth is a cornerstone in the field of computer science. It delves deep into fundamental algorithms, data structures, and the mathematical analysis of programming. Covering a wide range of topics from sorting and searching to combinatorial algorithms, it offers in - depth knowledge for both novice and experienced programmers. Whether you are interested in theoretical computer science or practical programming, this series is an invaluable resource that will enhance your understanding of the core concepts of computing.",
+        "price": 150.00,
+        "publisher": "Addison - Wesley"
+    },
+    {
+        "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
+        "title": "Introduction to Algorithms",
+        "description": "Known as the \"CLRS\" book, it is a comprehensive guide to algorithms. It presents a broad spectrum of algorithms with detailed explanations of their design, analysis, and implementation. The book not only covers classic algorithms but also modern ones used in areas like data mining and machine learning. With its clear and rigorous approach, it helps students and professionals alike to master the art of algorithm design and understand how to apply them in real - world scenarios. It also includes numerous exercises and case studies to reinforce learning.",
+        "price": 120.00,
+        "publisher": "MIT Press"
+    },
+    {
+        "author": "Brian W. Kernighan, Dennis M. Ritchie",
+        "title": "The C Programming Language",
+        "description": "A timeless classic in the programming world, this book introduced the C programming language to the masses. Written by the creators of C, it provides a concise and thorough introduction to the language's features. It explains how to write efficient and reliable C code, covering topics such as data types, control structures, functions, and pointers. The examples in the book are practical and easy to understand, making it an ideal resource for anyone who wants to learn C programming from scratch or improve their existing skills.",
+        "price": 50.00,
+        "publisher": "Prentice Hall"
+    },
+    {
+        "author": "Eric S. Raymond",
+        "title": "The Cathedral and the Bazaar",
+        "description": "This book offers a unique perspective on software development models. It contrasts the traditional \"cathedral\" - style of closed - source development with the more open and collaborative \"bazaar\" - style of open - source development. Through real - world examples and in - depth analysis, it explores the advantages and challenges of each approach. It has had a profound impact on the software development community, influencing the way developers think about project management, code sharing, and the role of the community in software creation.",
+        "price": 30.00,
+        "publisher": "O'Reilly Media"
+    },
+    {
+        "author": "Andrew Hunt, David Thomas",
+        "title": "The Pragmatic Programmer",
+        "description": "A must - read for programmers of all levels, this book focuses on practical programming techniques and professional development. It offers a collection of tips, tricks, and best practices that can help programmers write better code, solve problems more effectively, and grow their careers. The book emphasizes the importance of being a well - rounded programmer, covering aspects such as code craftsmanship, debugging, and dealing with legacy code. It encourages programmers to think critically and take ownership of their work.",
+        "price": 45.00,
+        "publisher": "Addison - Wesley"
+    },
+    {
+        "author": "Robert C. Martin",
+        "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+        "description": "In this book, Robert C. Martin emphasizes the importance of writing clean and maintainable code. He provides numerous guidelines and principles for creating code that is easy to understand, modify, and extend. Through real - world examples and code snippets, he demonstrates how to avoid common programming pitfalls and write code that adheres to high - quality standards. This book is essential for software developers who want to improve the quality of their code and contribute to more efficient and effective software projects.",
+        "price": 55.00,
+        "publisher": "Prentice Hall"
+    },
+    {
+        "author": "Martin Fowler",
+        "title": "Refactoring: Improving the Design of Existing Code",
+        "description": "Refactoring is a crucial skill for software developers, and this book is the definitive guide on the subject. Martin Fowler explains how to identify code that needs refactoring and provides a catalog of refactoring techniques. By applying these techniques, developers can improve the design of existing code, making it more modular, readable, and maintainable. The book also discusses the impact of refactoring on software development processes and how to integrate it into your workflow.",
+        "price": 60.00,
+        "publisher": "Addison - Wesley"
+    },
+    {
+        "author": "Douglas Crockford",
+        "title": "JavaScript: The Good Parts",
+        "description": "JavaScript is a complex and versatile language, and this book helps you focus on its most useful and reliable features. Douglas Crockford, a well - known JavaScript expert, identifies the \"good parts\" of the language and shows how to use them effectively. It covers topics such as functions, objects, prototypes, and closures, and provides practical advice on writing high - quality JavaScript code. Whether you are a beginner or an experienced JavaScript developer, this book will enhance your understanding of the language.",
+        "price": 35.00,
+        "publisher": "O'Reilly Media"
+    },
+    {
+        "author": "Thomas H. Davenport, Jeanne G. Harris",
+        "title": "Competing on Analytics: The New Science of Winning",
+        "description": "In the era of big data, this book explores how organizations can gain a competitive edge by leveraging analytics. It explains how to collect, analyze, and use data to make informed business decisions. Through case studies of successful companies, it shows how analytics can be applied in various business functions such as marketing, finance, and operations. This book is valuable for business leaders, data analysts, and anyone interested in using data to drive business success.",
+        "price": 40.00,
+        "publisher": "Harvard Business School Press"
+    },
+    {
+        "author": "Martin Kleppmann",
+        "title": "Designing Data - Intensive Applications",
+        "description": "This book provides a comprehensive overview of designing data - intensive applications. It covers a wide range of topics including data storage, data processing, and distributed systems. Martin Kleppmann explains the trade - offs involved in different design choices and provides practical advice on building scalable, reliable, and maintainable data - intensive applications. Whether you are a data engineer, a software developer, or a system architect, this book will deepen your understanding of data - centric application design.",
+        "price": 70.00,
+        "publisher": "O'Reilly Media"
+    }
+]    
