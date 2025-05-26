@@ -1,0 +1,74 @@
+{
+  "resources": [
+    {
+      "id": "R001",
+      "title": "ICT Training Package Companion Volume",
+      "description": "Contains unit codes, competency standards and study guides for all IT courses",
+      "price": 99.99,
+      "image": "images/resources1.jpg"
+    },
+    {
+      "id": "R002",
+      "title": "Cyber Security Sector Skills Plan",
+      "description": "Australian Cybersecurity Industry Skills Needs Analysis Report (published by AustCyber).",
+      "price": 79.99,
+      "image": "images/resources2.jpg"
+    },
+    {
+      "id": "R003",
+      "title": "Assessment Resources for ICT Qualifications",
+      "description": "Assessment tool templates for IT courses (e.g., programming projects, network configuration tasks)",
+      "price": 89.99,
+      "image": "images/resources3.jpg"
+    },
+    {
+      "id": "R004",
+      "title": "Cloud Computing Skills Framework",
+      "description": "Cloud Computing Career Pathways and Competency Standards",
+      "price": 129.99,
+      "image": "images/resources4.jpg"
+    },
+    {
+      "id": "R005",
+      "title": "ICT Industry Reference Committee (IRC) Updates",
+      "description": "Notice of Revision of Latest IT Industry Training Package",
+      "price": 119.99,
+      "image": "images/resources5.jpg"
+    },
+    {
+      "id": "R006",
+      "title": "Licensing Requirements for IT Professionals",
+      "description": "Professional certification requirements ",
+      "price": 149.99,
+      "image": "images/resources6.jpg"
+    },
+    {
+      "id": "R007",
+      "title": "Foundation Skills for ICT Careers",
+      "description": "Documentation of foundational skills (e.g., logical thinking, problem solving development)",
+      "price": 159.99,
+      "image": "images/resources7.jpg"
+    },
+    {
+      "id": "R008",
+      "title": "Skills Impact - ICT Skills Forecast 2023",
+      "description": "IT industry skills trends forecast for the next 3-5 years",
+      "price": 139.99,
+      "image": "images/resources8.jpg"
+    },
+    {
+      "id": "R009",
+      "title": "RTO User Guides for Delivering IT Courses",
+      "description": "IT Course Implementation Guide for Registered Training Organizations (RTOs)",
+      "price": 169.99,
+      "image": "images/resources9.jpg"
+    },
+    {
+      "id": "R010",
+      "title": "AQF Level Descriptions for IT Qualifications",
+      "description": "Australian Qualifications Framework (AQF) Level Descriptions for IT Diploma and Advanced Diploma",
+      "price": 189.99,
+      "image": "images/resources10.jpg"
+    }
+  ]
+} 
