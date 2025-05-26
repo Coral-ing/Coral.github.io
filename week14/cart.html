@@ -1,0 +1,49 @@
+<!-- week10/cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - IT Training Center</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses & Resources</a></li>
+                <li><a href="cart.html" class="restricted">Cart</a></li>
+                <li><a href="checkout.html" class="restricted">Checkout</a></li>
+            </ul>
+            <div class="user-status">
+                <span id="userStatus">Guest</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <h1>Shopping Cart</h1>
+            <div id="cartItems">
+                <!-- Cart items will be loaded dynamically -->
+            </div>
+            <div class="cart-summary">
+                <div class="total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 IT Training Center. All rights reserved.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/courses.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

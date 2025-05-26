@@ -1,0 +1,89 @@
+<!-- week10/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Training Center</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses & Resources</a></li>
+                <li><a href="cart.html" class="restricted">Cart</a></li>
+                <li><a href="checkout.html" class="restricted">Checkout</a></li>
+            </ul>
+            <div class="user-status">
+                <span id="userStatus">Guest</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="banner">
+            <div class="banner-content">
+                <div class="agency-logo">
+                    <img src="images/logo.png" alt="IT Training Center">
+                    <span>IT Training Center</span>
+                </div>
+                <div class="banner-text">
+                    <h1>Enhance Your IT Skills</h1>
+                    <p>Professional IT training courses and resources to help you achieve career growth</p>
+                </div>
+                <div class="contact-info">
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>400-123-4567</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@ittraining.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-image"></div>
+        </div>
+    </section>
+
+    <section class="welcome-section">
+        <h1>Welcome to IT Training Center</h1>
+        <p>We provide professional IT training courses and resources to help you enhance your skills and achieve career growth.</p>
+        <a href="courses.html" class="cta-button">Browse Courses</a>
+    </section>
+
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-forms">
+                <div class="register-form">
+                    <h2>Register</h2>
+                    <form id="registerForm">
+                        <input type="text" id="regUsername" placeholder="Username" required>
+                        <input type="email" id="regEmail" placeholder="Email Address" required>
+                        <input type="password" id="regPassword" placeholder="Password (min 6 characters)" required minlength="6">
+                        <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required minlength="6">
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <input type="text" id="loginUsername" placeholder="Username" required>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 IT Training Center. All rights reserved.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
+</html>
