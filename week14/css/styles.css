@@ -1,0 +1,720 @@
+/* Coral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+nav a.active {
+    background-color: #4CAF50;
+}
+
+.user-status {
+    color: white;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user-status:before {
+    content: '👤';
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 8%;
+    position: relative;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 50%;
+    height: 100%;
+    background: #ffd700;
+    transform: skewX(-15deg);
+    z-index: 1;
+}
+
+.banner-content {
+    color: white;
+    z-index: 2;
+    width: 50%;
+}
+
+.agency-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.agency-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.agency-logo span {
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+.banner-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.banner-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.contact-info {
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: white;
+    margin: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.welcome-section p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Auth Section */
+.auth-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.auth-forms {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.register-form, .login-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Courses and Resources Section Styles */
+/* These styles are for the Courses & Resources page only */
+.courses-section,
+.resources-section {
+    padding: 2rem;
+    margin: 2rem auto;
+    background: #f8f9fa;
+    border-radius: 12px;
+    max-width: 1200px; /* Limit width and center */
+}
+
+.courses-section h1,
+.resources-section h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.courses-section h1:after,
+.resources-section h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #4CAF50;
+    border-radius: 2px;
+}
+
+.courses-container,
+.resources-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted minmax for better fit */
+    gap: 2rem; /* Adjusted gap */
+    margin-top: 2rem;
+    padding: 0 1rem; /* Added padding */
+}
+
+.course-card,
+.resource-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover,
+.resource-card:hover {
+    transform: translateY(-5px); /* Adjusted hover effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-image,
+.resource-image {
+    width: 100%;
+    height: 200px; /* Adjusted image height */
+    overflow: hidden;
+    position: relative;
+}
+
+.course-image img,
+.resource-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.course-card:hover .course-image img,
+.resource-card:hover .resource-image img {
+    transform: scale(1.05); /* Adjusted hover scale */
+}
+
+.course-content,
+.resource-content {
+    padding: 1.5rem; /* Adjusted padding */
+    background: linear-gradient(to bottom, #fff, #f8f9fa);
+    flex: 1;
+    display: flex; /* Added flex for content alignment */
+    flex-direction: column;
+    gap: 0.5rem; /* Added gap */
+}
+
+.course-content h2,
+.resource-content h2 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem; /* Adjusted margin */
+    font-size: 1.5rem; /* Adjusted font size */
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.course-id,
+.resource-id {
+    color: #666;
+    font-size: 0.9rem; /* Adjusted font size */
+    margin-bottom: 0.5rem; /* Adjusted margin */
+    padding: 0.3rem 0.8rem; /* Adjusted padding */
+    background: #f0f2f5;
+    border-radius: 15px; /* Adjusted border radius */
+    display: inline-block;
+    align-self: flex-start; /* Align to start in flex container */
+}
+
+.duration {
+    color: #4CAF50;
+    font-weight: 600;
+    margin: 0.8rem 0; /* Adjusted margin */
+    font-size: 1rem; /* Adjusted font size */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.duration:before {
+    content: '⏱️';
+    margin-right: 0.2rem; /* Added margin */
+}
+
+.assessments,
+.projects {
+    margin: 1rem 0; /* Adjusted margin */
+    padding: 1rem; /* Adjusted padding */
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.assessments h3,
+.projects h3 {
+    color: #2c3e50;
+    margin-bottom: 0.8rem; /* Adjusted margin */
+    font-size: 1.1rem; /* Adjusted font size */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.assessments h3:before {
+    content: '📝';
+    margin-right: 0.2rem; /* Added margin */
+}
+
+.projects h3:before {
+    content: '🎯';
+    margin-right: 0.2rem; /* Added margin */
+}
+
+.assessments-list,
+.projects-list {
+    list-style: none;
+    padding-left: 0.5rem; /* Adjusted padding */
+}
+
+.assessments-list li,
+.projects-list li {
+    color: #555;
+    margin: 0.5rem 0; /* Adjusted margin */
+    position: relative;
+    padding-left: 1.5rem; /* Adjusted padding */
+    line-height: 1.4;
+}
+
+.assessments-list li:before,
+.projects-list li:before {
+    content: "✓";
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.description {
+    color: #555;
+    line-height: 1.6; /* Adjusted line height */
+    margin: 1rem 0; /* Adjusted margin */
+    font-size: 1rem; /* Adjusted font size */
+}
+
+/* Cart Styles */
+.cart-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.cart-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: center;
+}
+
+/* Styles specifically for the cart items list */
+#cartItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.cart-section .cart-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 0; /* Remove bottom margin from individual items */
+    background: #fff;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cart-section .cart-item-image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.cart-section .cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-section .cart-item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cart-section .quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.cart-section .quantity-control button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background: #f8f8f8;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.cart-section .quantity-control button:hover {
+    background: #eee;
+    border-color: #ccc;
+}
+
+.cart-section .quantity-input {
+    width: 60px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.cart-section .quantity-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.cart-section .quantity-input::-webkit-inner-spin-button,
+.cart-section .quantity-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cart-section .quantity-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.cart-section .remove-btn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.cart-section .remove-btn:hover {
+    background: #cc0000;
+}
+
+.cart-section .cart-summary {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    margin-top: 2rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+.cart-section .cart-summary .total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.cart-section .checkout-btn {
+    background-color: #FF5722;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-section .checkout-btn:hover {
+    background-color: #E64A19;
+}
+
+/* Checkout Styles */
+.checkout-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.checkout-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.order-confirmation {
+    margin: 2rem 0;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.order-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.order-item h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.order-item p {
+    margin: 0.25rem 0;
+    color: #666;
+}
+
+.order-total {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.order-total h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Error Message */
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ef9a9a;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Auth Forms Responsive */
+    .auth-forms {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Banner Responsive */
+    .banner-content {
+        width: 100%;
+    }
+
+    .banner::after {
+        display: none;
+    }
+
+    /* Courses and Resources Responsive */
+    .courses-container,
+    .resources-container {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+
+    .course-content,
+    .resource-content {
+        padding: 1.5rem;
+    }
+
+    .course-image,
+    .resource-image {
+        height: 200px;
+    }
+
+    /* Cart Responsive */
+    .cart-section .cart-item {
+        flex-direction: column;
+        align-items: center; /* Center items in column layout */
+    }
+
+    .cart-section .cart-item-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .cart-section .cart-item-details {
+        text-align: center;
+        align-items: center; /* Center details content */
+    }
+
+    .cart-section .quantity-control {
+        justify-content: center;
+    }
+
+    .cart-section .remove-btn {
+        align-self: center;
+    }
+}
