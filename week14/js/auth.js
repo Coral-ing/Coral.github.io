@@ -28,6 +28,8 @@ function handleLogin(e) {
     if (user) {
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('username', username);
+        // Record login time
+        localStorage.setItem('loginTime', new Date().getTime());
         alert('Login successful!');
         window.location.href = 'cart.html';
     } else {
@@ -93,10 +95,28 @@ function handleRegister(e) {
     document.getElementById('registerForm').reset();
 }
 
+// Check login time and auto logout
+function checkLoginTimeout() {
+    const loginTime = localStorage.getItem('loginTime');
+    if (loginTime) {
+        const currentTime = new Date().getTime();
+        const timeDiff = currentTime - parseInt(loginTime);
+        // 30 minutes = 30 * 60 * 1000 milliseconds
+        if (timeDiff > 30 * 60 * 1000) {
+            logout();
+            alert('You have been automatically logged out due to inactivity');
+        }
+    }
+}
+
+// Check login status every minute
+setInterval(checkLoginTimeout, 60 * 1000);
+
 // Logout
 function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('username');
+    localStorage.removeItem('loginTime');
     window.location.href = 'index.html';
 }
 
@@ -156,34 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Login form submission handler
     if (loginForm) {
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const username = document.getElementById('loginUsername').value;
-            const password = document.getElementById('loginPassword').value;
-
-            // Get user data
-            const users = JSON.parse(localStorage.getItem('users')) || [];
-
-            // Verify user
-            const user = users.find(u => u.username === username && u.password === password);
-
-            if (user) {
-                // Save login status
-                localStorage.setItem('username', username);
-                localStorage.setItem('isLoggedIn', 'true');
-                
-                alert('Login successful!');
-                loginForm.reset();
-                
-                // Update user status display
-                updateUserStatus();
-                
-                // Redirect to cart page
-                window.location.href = 'cart.html';
-            } else {
-                alert('Invalid username or password!');
-            }
-        });
+        loginForm.addEventListener('submit', handleLogin);
     }
 
     // Check user login status
