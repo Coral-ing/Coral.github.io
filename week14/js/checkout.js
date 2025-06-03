@@ -1,4 +1,3 @@
-// week10/js/checkout.js
 // Check user login status
 function checkAuth() {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
