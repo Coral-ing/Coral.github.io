@@ -1,5 +1,3 @@
-// week10/js/cart.js
-
 // Load and display all items in the cart view
 async function loadAndDisplayAllItems() {
     try {
