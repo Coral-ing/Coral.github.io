@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - IT Training Center</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
@@ -27,12 +28,30 @@
         <div class="checkout-buttons">
             <button class="btn-success" onclick="downloadOrders()">Download Orders as JSON</button>
             <button class="btn-warning" onclick="clearStorage()">Clear Local Storage (Cart + Orders)</button>
-            <button class="btn-danger" onclick="logout()">Logout</button>
+            <button class="btn-danger" onclick="logout459()">Logout</button>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 IT Training Center. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>400-123-4567</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>contact@Coraltraining.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Level 5, 123 Tech Street, Sydney NSW 2000, Australia</span>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 RTO Training Services. All rights reserved. | RTO Number: 12345</p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/auth.js"></script>
