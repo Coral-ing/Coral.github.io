@@ -207,13 +207,13 @@ function updateCartTotal() {
 }
 
 // Check login status (retained for restricted access)
-function isLoggedIn() {
-    return localStorage.getItem('isLoggedIn') === 'true';
+function isLoggedIn459() {
+    return sessionStorage.getItem('isLoggedIn') === 'true';
 }
 
 // Proceed to checkout
-function proceedToCheckout() {
-    if (!isLoggedIn()) {
+function proceedToCheckout459() {
+    if (!isLoggedIn459()) {
         alert('Please login to proceed to checkout');
         return;
     }
@@ -246,6 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const checkoutBtn = document.getElementById('checkoutBtn');
     if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', proceedToCheckout);
+        checkoutBtn.addEventListener('click', proceedToCheckout459);
     }
 });
