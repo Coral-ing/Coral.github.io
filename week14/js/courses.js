@@ -1,18 +1,17 @@
 // Load and display courses
 async function loadCourses() {
     try {
+        const container = document.getElementById('coursesContainer');
+        if (!container) {
+            return;
+        }
+        
         const response = await fetch('./data/courses.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const coursesData = await response.json();
         
-        const container = document.getElementById('coursesContainer');
-        if (!container) {
-            console.error('Courses container not found');
-            return;
-        }
-
         if (!coursesData.courses || !Array.isArray(coursesData.courses)) {
             throw new Error('Invalid courses data format');
         }
@@ -58,18 +57,17 @@ async function loadCourses() {
 // Load and display resources
 async function loadResources() {
     try {
+        const container = document.getElementById('resourcesContainer');
+         if (!container) {
+            return;
+        }
+
         const response = await fetch('./data/resources.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const resourcesData = await response.json();
         
-        const container = document.getElementById('resourcesContainer');
-        if (!container) {
-            console.error('Resources container not found');
-            return;
-        }
-
         if (!resourcesData.resources || !Array.isArray(resourcesData.resources)) {
             throw new Error('Invalid resources data format');
         }
@@ -101,8 +99,8 @@ async function loadResources() {
 }
 
 // Add item to cart
-function addToCart(itemId) {
-    if (!isLoggedIn()) {
+function addToCart459(itemId) {
+    if (!isLoggedIn459()) {
         alert('Please login to add items to cart');
         return;
     }
@@ -121,7 +119,7 @@ function addToCart(itemId) {
 }
 
 // Check login status
-function isLoggedIn() {
+function isLoggedIn459() {
     return localStorage.getItem('isLoggedIn') === 'true';
 }
 
